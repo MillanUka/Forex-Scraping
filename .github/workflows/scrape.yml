@@ -14,7 +14,14 @@ jobs:
       uses: actions/checkout@v2
     - name: Fetch latest data
       run: |-
-        curl  "https://www.finviz.com/forex_performance.ashx" | grep "class=\"body-table\"" | jq > forex.html
+        curl  "https://www.finviz.com/forex_performance.ashx" | grep "class=\"body-table\"" > forex.html
+    - name: setup python
+     uses: actions/setup-python@v2
+     with:
+       python-version: 3.8 
+   - name: execute web parser script
+     run: |
+       python web_parse.py
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
