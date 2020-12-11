@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <title>Forex Performance</title>
+    <style>
+        table {
+            text-align: left;
+            border: 1px black solid;
+        }
+        th {
+            font-size: larger;
+            color: cadetblue;
+            border: 1px black solid;
+        }
+        td {
+            border: 1px black solid;
+        }
+    </style>
 </head>
 <body>
+    <h1>Forex Performance</h1>
+    <small>2020-12-11</small>
     <script>
-        $.getJSON('data.json', function(data) {
-            console.log(data);
-        });
+       var data = `<table>
+    <tr>
+    <th>No.</th>
+    <th>Ticker</th>
+    <th>Price</th><th>Perf 5Min</th><th>Perf Hour</th><th>Perf Day</th><th>Perf Week</th><th>Perf Month</th><th>Perf Quart</th><th>Perf Half</th><th>Perf Year</th><th>Perf YTD</th></tr><tr><td>1</td><td>AUDUSD</td><td>0.7554</td><td>0.00%</td><td>-0.13%</td><td>0.28%</td><td>1.73%</td><td>3.74%</td><td>4.08%</td><td>7.95%</td><td>10.94%</td><td>7.66%</td></tr><tr><td>2</td><td>GBPUSD</td><td>1.3319</td><td>0.01%</td><td>-0.02%</td><td>0.23%</td><td>-0.82%</td><td>0.37%</td><td>4.02%</td><td>4.49%</td><td>1.25%</td><td>0.52%</td></tr><tr><td>3</td><td>EURUSD</td><td>1.2155</td><td>0.01%</td><td>-0.02%</td><td>0.17%</td><td>0.28%</td><td>2.90%</td><td>2.88%</td><td>6.88%</td><td>9.58%</td><td>8.31%</td></tr><tr><td>4</td><td>NZDUSD</td><td>0.7100</td><td>0.04%</td><td>-0.09%</td><td>0.06%</td><td>0.92%</td><td>4.10%</td><td>6.76%</td><td>8.64%</td><td>8.48%</td><td>5.44%</td></tr><tr><td>5</td><td>EURGBP</td><td>0.9126</td><td>0.00%</td><td>0.00%</td><td>0.00%</td><td>1.26%</td><td>2.55%</td><td>-1.07%</td><td>2.31%</td><td>8.24%</td><td>7.76%</td></tr><tr><td>6</td><td>USDCAD</td><td>1.2736</td><td>0.01%</td><td>0.07%</td><td>0.00%</td><td>-0.37%</td><td>-2.26%</td><td>-3.45%</td><td>-5.04%</td><td>-3.74%</td><td>-1.85%</td></tr><tr><td>7</td><td>GBPJPY</td><td>138.48</td><td>0.01%</td><td>0.00%</td><td>-0.01%</td><td>-1.02%</td><td>-0.84%</td><td>1.90%</td><td>1.42%</td><td>-3.16%</td><td>-3.80%</td></tr><tr><td>8</td><td>USDCHF</td><td>0.8857</td><td>0.00%</td><td>0.01%</td><td>-0.05%</td><td>-0.67%</td><td>-3.20%</td><td>-2.73%</td><td>-6.16%</td><td>-10.03%</td><td>-8.42%</td></tr><tr><td>9</td><td>USDJPY</td><td>103.97</td><td>0.00%</td><td>0.02%</td><td>-0.24%</td><td>-0.19%</td><td>-1.22%</td><td>-2.03%</td><td>-2.93%</td><td>-4.36%</td><td>-4.28%</td></tr><tr><td>10</td><td>BTCUSD</td><td>17864.7800</td><td>0.16%</td><td>-0.21%</td><td>-3.01%</td><td>-6.89%</td><td>16.01%</td><td>72.16%</td><td>83.11%</td><td>142.63%</td><td>148.51%</td></tr></table>`
+       document.write(data)
     </script>
 </body>
 </html>

@@ -17,7 +17,8 @@ for i in rawData:
       rows.append(i)
 
 reshaped = []
-json_data = []
+from datetime import date
+json_data = [{"date_updated": (str)(date.today())}]
 for i in range(0, 10):
     row = rows[(i*12):(i*12)+12]
     reshaped.append(row)
