@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
+        python-version: [3.8]
     steps:
     - name: Check out this repo
       uses: actions/checkout@v2
@@ -25,7 +25,7 @@ jobs:
     - name: Run the python script
       run: |-
         pip install beautifulsoup4
-        python web_parse.py
+        python ./scripts/web_parse.py
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
