@@ -9,17 +9,19 @@ on:
 jobs:
   scheduled:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
     steps:
     - name: Check out this repo
       uses: actions/checkout@v2
     - name: Fetch latest data
       run: |-
         curl  "https://www.finviz.com/forex_performance.ashx" > forex.html
-    - name: setup python
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8 
-      - name: execute web parser script
+        python-version: ${{ matrix.python-version }}
       run: |-
         pip install beautifulsoup4
         python web_parse.py
