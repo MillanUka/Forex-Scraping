@@ -27,4 +27,6 @@ f = open("data.json", "w")
 f.write(json.dumps(json_data))
 f.close()
 
+data = pd.DataFrame(reshaped, columns=['No.','Ticker', 'Price', 'Perf 5Min' , 'Perf Hour' , 'Perf Day', 'Perf Week', 'Perf Month', 'Perf Quart', 'Perf Half', 'Perf Year', 'Perf YTD'])
+data.to_csv("data.csv")
 print("Done")
