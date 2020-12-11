@@ -16,12 +16,13 @@ jobs:
       run: |-
         curl  "https://www.finviz.com/forex_performance.ashx" > forex.html
     - name: setup python
-     uses: actions/setup-python@v2
-     with:
-       python-version: 3.8 
-   - name: execute web parser script
-     run: |
-       python web_parse.py
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8 
+      - name: execute web parser script
+      run: |-
+        pip install beautifulsoup4
+        python web_parse.py
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"

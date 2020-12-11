@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="data.json"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 </head>
 <body>
     <script>
-        var d = JSON.parse(data)
-        console.log(d);
+        $.getJSON('data.json', function(data) {
+            console.log(data);
+        });
     </script>
 </body>
 </html>
