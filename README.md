@@ -7,5 +7,3 @@ It can be found <a href="https://millanuka.github.io/Forex-Scraping/">here</a>
 <br/>
 <br/>
 MIT License
-<br/>
-Copyright (c) 2020 Millan Uka
